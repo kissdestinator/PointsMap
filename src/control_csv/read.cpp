@@ -2,6 +2,7 @@
 //=====================================================
 // Basic C++: read.cpp
 // Specification of the reader - reads the csv file and organize it.
+// unfinished and not compiled with ubuntu
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou
 // For the project: http://bit.ly/kiss-web
