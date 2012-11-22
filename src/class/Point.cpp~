@@ -66,5 +66,6 @@ ostream& operator<<(ostream& os, Point p)
   os << "#" << *(i++);
   for(; i != p._destinations.end(); ++i)
     os << ", #" << *i;
+  os << '.';
   return os;
 }

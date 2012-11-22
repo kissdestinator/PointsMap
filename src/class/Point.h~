@@ -65,7 +65,7 @@ public:
   //! Check if the distance between the paramater and the point is low enough.
   friend bool is_area_reached(Point p);
   //! calculate the distance between the points paramaters.
-  friend float distance(Point p0, Point p1);
+  friend int distance(Point p0, Point p1);
 
   // Relational operators
   //! Equality operator on Point
@@ -81,4 +81,3 @@ public:
 };
 
 #endif
-

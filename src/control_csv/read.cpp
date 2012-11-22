@@ -12,8 +12,8 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 using namespace std;
 
 vector<string> split_sentence(const string& sentence){
@@ -37,10 +37,7 @@ vector<string> split_word(const string& sentence){
 int convert_string_to_integer(string a){ //get this function to work
 	
 }
-double points_x_y(int variable){
-	double z = (double)variable*0.001; //miliseconds
-	return z;
-}
+
 
 int main (){
 	ifstream myfile;
@@ -55,8 +52,8 @@ int main (){
 
 			v = split_sentence(line);	
 			int id = atoi(v[0].c_str());
-			double x = points_x_y(atoi(v[1].c_str())); //converting to int and then to double - m = 10^-3
-			double y = points_x_y(atoi(v[2].c_str())); 
+			double x = atoi(v[1].c_str()); //converting to int and then to double - m = 10^-3
+			double y = atoi(v[2].c_str()); 
 			//each time call the object points to store the info.
 			string roads1 = v[3].c_str();
 			//v1 = split_word(roads1); //v1[0..] - depends how we are going touse the existing-knowing roads
