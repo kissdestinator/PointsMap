@@ -7,13 +7,13 @@
 //=======================================================================
 
 /*!
- * \file Point.h
+ * \file Road.h
  *
- * \brief Definition of class Point.
+ * \brief Definition of class Road.
  */
 
-#ifndef _POINT_H_
-#define _POINT_H_
+#ifndef _ROAD_H_
+#define _ROAD_H_
 
 #include <iostream>
 #include <list>
@@ -37,7 +37,7 @@ private:
 public:
   // Constructors
   //! Regular constructor.
-  Point(int x, int y, int id)
+  Point(int x = -1, int y = -1, int id = -1)
     : _x(x), _y(y), _id(id) { }
 
   // Accessors
@@ -64,6 +64,8 @@ public:
 
   //! Check if the distance between the paramater and the point is low enough.
   friend bool is_area_reached(Point p);
+  //! calculate the distance between the points paramaters.
+  friend float distance(Point p0, Point p1);
 
   // Relational operators
   //! Equality operator on Point
@@ -79,4 +81,3 @@ public:
 };
 
 #endif
-
