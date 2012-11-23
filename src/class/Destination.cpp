@@ -1,19 +1,20 @@
 //=======================================================================
-// Basic C++: classe Point
-//      Specification of class Point
+// Basic C++: classe Destination
+//      Specification of class Destination
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
 /*!
- * \file Point.cpp
+ * \file Destination.cpp
  *
- * \brief Implementation of class Point.
+ * \brief Implementation of class Destination.
  */
 
-#include "Point.h"
+#include "Destination.h"
 using namespace std;
+
 //-----------------------------------------------------------------------
 // Relational operators (implemented as friend functions)
 //-----------------------------------------------------------------------
@@ -21,13 +22,13 @@ using namespace std;
 /*!
  * All members must be equal except.
  *
- * \note We give a direct definition here because it is simple, but a
- * definition of this operator can be derived from operator<().
+ * \note equality of the destinations NOT checked.
  */
-bool operator==(Point p1, Point p2)
+bool operator==(Destination p1, Destination p2)
 {
     return p1._x == p2._x
-        && p1._y == p2._y;
+        && p1._y == p2._y
+        && p1._id == p2._id;
 }
 
 //-----------------------------------------------------------------------
@@ -35,13 +36,18 @@ bool operator==(Point p1, Point p2)
 //-----------------------------------------------------------------------
 
 /*!
- * We produce a printable form, with the name of the month.
+ * We produce a printable form of the Destination
  *
  * \param[in,out] os the output stream
- * \param[in] p the point to print
+ * \param[in] d the destination to print
  */
-ostream& operator<<(ostream& os, Point p)
+ostream& operator<<(ostream& os, Destination d)
 {
-  os << '(' << p._x << ',' << p._y << ')';
+  os << '#' << d._id << '(' << d._x << ',' << d._y << ')' << "; destinations: ";
+  list<int>::iterator i = d._destinations.begin();
+  os << "#" << *(i++);
+  for(; i != d._destinations.end(); ++i)
+    os << ", #" << *i;
+  os << '.';
   return os;
 }

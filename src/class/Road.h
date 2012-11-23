@@ -2,7 +2,7 @@
 // Basic C++: classe Road
 //      Specification of class Road
 //-----------------------------------------------------------------------
-// Auzias Maël - Constantina Ioannou
+// Auzias Maël - Constantina Ioannou - Grzegorczyk Lucas
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
@@ -14,70 +14,74 @@
 
 #ifndef _ROAD_H_
 #define _ROAD_H_
+#define DEFAULT_ANGLE -1
+#define DEFAULT_DIST -1
+#define DEFAULT_VALUE (_angle == -1 || _distance == -1)
 
 #include <iostream>
 #include <list>
+#include "Destination.h"
+#include "Point.h"
 
 using namespace std;
 
 /*!
  * \brief Class Road.
  *
- * Represent a point has x, y, id and list of points's id
- * reachable to allow the representation of roads.
+ * Represent road between two destinations
+ * calculate the angle, the distance of the road.
  */
-class Point
+class Road
 {
 private:
-  int _x;  //!< x coordinate
-  int _y; //!< y coordinates
-  int _id; //!< id of the point
-  list<int> _destinations; //!< Reachable point from this one
+  Destination _start;  //!< Beginning of road
+  Destination _end; //!< End of the road
+  int _id; //!< id of the road *nothing related with the destination's id*
+  double _angle; //!< Angle of the road
+  int _distance; //!< Distance between the start and the end of the road
+
+  //! Update the angle and the distance 
+  void update_road();
+  //! Calculate and set the angle using class' attribute from the lower id of any destination to the higher (the same real road has two different angle...)
+  double calcul_angle();
+  //! Calculate and set the distance using class' attribute
+  int calcul_distance();
 
 public:
   // Constructors
   //! Regular constructor.
-  Point(int x = -1, int y = -1, int id = -1)
-    : _x(x), _y(y), _id(id) { }
+  Road(Destination start, Destination end, int id = -1, double angle = DEFAULT_ANGLE, int distance = DEFAULT_DIST)
+    : _start(start), _end(end), _id(id), _angle(angle), _distance(distance) { if(DEFAULT_VALUE) update_road(); }
 
   // Accessors
-  //! Get this x coordinate.
-  int x() const {return _x;}
-  //! Get this y coordinates.
-  int y() const {return _y;}
-  //! Get this id.
+  //! Get the start destination
+  Destination start() const {return _start;}
+  //! Get the end destination
+  Destination end() const {return _end;}
+  //! Get the id of the road
   int id() const {return _id;}
-  //! Get this reachable points destinations.
-  list<int> destinations() const {return _destinations;}
+  //! Get the angle of the road
+  int angle() const {return _angle;}
+  //! Get the distance of the road
+  int distance() const {return _distance;}
 
   // Mutators
-  //! Set a new x coordinate
-  void setX(int x) {_x = x;}
-  //! Set a new y coordinate
-  void setY(int y) {_y = y;}
+  //! Set a new start and update the road
+  void set_start(Destination start) {_start = start;update_road();}
+  //! Set a new end and update the road
+  void set_end(Destination end) {_end = end;update_road();}
   //! Set a new y id
   void set_id(int id) {_id = id;}
-  //! Set a new destinations list
-  void set_destinations(list<int> destinations) {_destinations = destinations;}
-  //! Add a new destination if this one does not exist
-  void add_destination(int p);
-
-  //! Check if the distance between the paramater and the point is low enough.
-  friend bool is_area_reached(Point p);
-  //! calculate the distance between the points paramaters.
-  friend float distance(Point p0, Point p1);
 
   // Relational operators
-  //! Equality operator on Point
-  friend bool operator==(Point p1, Point p2);
-  //! Unequality operator on Date
-  friend bool operator!=(Point p1, Point p2) {return !(p1 == p2);}
+  //! Equality operator on Road
+  friend bool operator==(Road r1, Road r2);
+  //! Unequality operator on Road
+  friend bool operator!=(Road r1, Road r2) {return !(r1 == r2);}
 
   // IO operations
   //! Print out a Point.
-  friend ostream& operator<<(ostream& os, Point p);
-  
-  void print(void);
+  friend ostream& operator<<(ostream& os, Road r);
 };
 
 #endif
