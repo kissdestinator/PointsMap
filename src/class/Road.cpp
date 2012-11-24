@@ -17,25 +17,6 @@ using namespace std;
 //-----------------------------------------------------------------------
 // Relational operators (implemented as friend functions)
 //-----------------------------------------------------------------------
-/*!
- * Calculate the angle between the two destinations attribute
- */
-double Road::calcul_angle()
-{
-  cout << "Road::calcul_angle is NOT implemented!! Let's code!" << endl;
-  return 361;
-}
-
-/*!
- * Calculate the distance between the two destinations attribute
- * from the lower id of any destination to the higher
- * (the same real road has two different angle...)
- */
-int Road::calcul_distance()
-{
-  cout << "Road::calcul_distance is NOT implemented! Use your head instead of the other's one!" << endl;
-  return 42;
-}
 
 /*!
  * Method called after a changment of any
@@ -43,8 +24,8 @@ int Road::calcul_distance()
  */
 void Road::update_road()
 {
-  _angle = calcul_angle();
-  _distance = calcul_distance();
+  _angle = Calcul::angle(_start, _end);
+  _distance = Calcul::distance(_start, _end);
 }
 
 //-----------------------------------------------------------------------
