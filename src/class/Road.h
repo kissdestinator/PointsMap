@@ -38,7 +38,7 @@ private:
   Destination _end; //!< End of the road
   int _id; //!< id of the road *nothing related with the destination's id*
   double _angle; //!< Angle of the road
-  int _distance; //!< Distance between the start and the end of the road
+  double _distance; //!< Distance between the start and the end of the road
 
   //! Update the angle and the distance 
   void update_road();
@@ -47,7 +47,7 @@ private:
 public:
   // Constructors
   //! Regular constructor.
-  Road(Destination start, Destination end, int id = -1, double angle = DEFAULT_ANGLE, int distance = DEFAULT_DIST)
+  Road(Destination start, Destination end, int id = -1, double angle = DEFAULT_ANGLE, double   distance = DEFAULT_DIST)
     : _start(start), _end(end), _id(id), _angle(angle), _distance(distance) { if(DEFAULT_VALUE) update_road(); }
 
   // Accessors
