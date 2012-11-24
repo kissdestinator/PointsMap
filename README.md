@@ -25,6 +25,3 @@ Conventions to code:
 
   Questions from Lucas:
   - Could you explain how MakeFile works? (Links, oral explanation, anything, thanks in advance).
-  Other remarks:
-  - Created new branch called "inDevelopement" - please use that for colborative work on unfinished code,
-  - We will merge it to master when the code is "stable".
