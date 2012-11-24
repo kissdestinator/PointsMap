@@ -8,7 +8,6 @@ using namespace std;
  * Print them
  */
 int main() {
-
   Point* points = new Point[10];  // Create arrray of points using defualt constructor
   for (int i = 0; i < 10; i++)    // Change in a loop values of points
     points[i].set(i, -i);
@@ -27,7 +26,5 @@ int main() {
     cout << "Everything works as expected" << endl;
   else
     cout << "Ooops, something went wrong... Lucas.learnToCode()" << endl;
-
-
   return 0;
 }
