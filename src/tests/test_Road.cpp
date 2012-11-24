@@ -32,6 +32,7 @@ for (int i=0; i<3; i++){
       new( &roads[i] )Road(d[i%3],d[(i+1)%3]);
     if (i>2)
       new( &roads[i] )Road(d[(i+1)%3],d[i%3]);
+    roads[i].set_id(i);
     cout << roads[i] << endl;
   }
 
