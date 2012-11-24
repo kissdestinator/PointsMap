@@ -49,7 +49,11 @@ public:
   static double angle(Point p1, Point p2){
     int difx = p2.x()-p1.x();
     int dify = p2.y()-p1.y();
-    return (atan2(dify, difx) * 180 / M_PI);
+    double angleDeg = atan2(dify, difx) * 180 / M_PI;
+    if (angleDeg >= 0)
+      return angleDeg;
+    else
+      return (angleDeg+360);
   }
 };
 

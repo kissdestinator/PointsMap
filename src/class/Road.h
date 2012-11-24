@@ -58,9 +58,9 @@ public:
   //! Get the id of the road
   int id() const {return _id;}
   //! Get the angle of the road
-  int angle() const {return _angle;}
+  double angle() const {return _angle;}
   //! Get the distance of the road
-  int distance() const {return _distance;}
+  double distance() const {return _distance;}
 
   // Mutators
   //! Set a new start and update the road
