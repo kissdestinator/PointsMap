@@ -21,7 +21,7 @@
 #include <iostream>
 #include <list>
 #include "Destination.h"
-#include "Point.h"
+#include "Calcul.h"
 
 using namespace std;
 
@@ -42,10 +42,7 @@ private:
 
   //! Update the angle and the distance 
   void update_road();
-  //! Calculate and set the angle using class' attribute from the lower id of any destination to the higher (the same real road has two different angle...)
-  double calcul_angle();
-  //! Calculate and set the distance using class' attribute
-  int calcul_distance();
+
 
 public:
   // Constructors
