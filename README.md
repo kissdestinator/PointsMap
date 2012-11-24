@@ -16,12 +16,10 @@ Conventions to code:
   - NO cout in class method expect if its name is "print" (or for debugging),
   - One file per class to test it named test_:class name:,
   - Do NOT push if the code is not correctly execuded (compilling is not enough),
+  - Do NOT push binary file,
   - Compile WITHOUT warning,
   - Do NOT modify a code that you do not understand,
   - Use the csv file named "file.csv" for the test (which correspond to the example: http://bit.ly/kiss-csv ),
   - Keep the Makefile up to date (if you do not know read the next convention),
   - Ask questions, demand answers,
   - Have fun.
-
-  Questions from Lucas:
-  - Could you explain how MakeFile works? (Links, oral explanation, anything, thanks in advance).
