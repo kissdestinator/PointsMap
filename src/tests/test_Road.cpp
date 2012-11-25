@@ -14,9 +14,9 @@ Destination d[3];
 for (int i=0; i<3; i++){
   d[i].set_id(i);
 }
-  d[0].set(-5,6);
-  d[1].set(3,4);
-  d[2].set(0,-7);
+  d[0].set(0,0);
+  d[1].set(1,1);
+  d[2].set(1,0);
   d[0].add_destination(1);        // Triangle of destinations
   d[0].add_destination(2);
   d[1].add_destination(0);

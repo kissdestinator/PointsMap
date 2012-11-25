@@ -16,7 +16,7 @@
 #define _ROAD_H_
 #define DEFAULT_ANGLE -1
 #define DEFAULT_DIST -1
-#define DEFAULT_VALUE (_angle == -1 || _distance == -1)
+#define DEFAULT_VALUE (_start.x() == -1 && _start.y() == -1)
 
 #include <iostream>
 #include <list>
@@ -48,7 +48,7 @@ public:
   // Constructors
   //! Regular constructor.
   Road(Destination start, Destination end, int id = -1, double angle = DEFAULT_ANGLE, double   distance = DEFAULT_DIST)
-    : _start(start), _end(end), _id(id), _angle(angle), _distance(distance) { if(DEFAULT_VALUE) update_road(); }
+    : _start(start), _end(end), _id(id), _angle(angle), _distance(distance) { if(!DEFAULT_VALUE) update_road(); }
 
   // Accessors
   //! Get the start destination

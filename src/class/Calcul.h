@@ -50,10 +50,7 @@ public:
     int difx = p2.x()-p1.x();
     int dify = p2.y()-p1.y();
     double angleDeg = atan2(dify, difx) * 180 / M_PI;
-    if (angleDeg >= 0)
-      return angleDeg;
-    else
-      return (angleDeg+360);
+    return (angleDeg >= 0) ? angleDeg : (angleDeg+360);
   }
 };
 
