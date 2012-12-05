@@ -1,17 +1,16 @@
-
 //=======================================================================
 // Basic C++: classe Reader
-//      Specification of class Reader
+// Specification of class Reader
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
 /*!
- * \file Reader.h
- *
- * \brief Definition of class READER.
- */
+* \file Reader.h
+*
+* \brief Definition of class READER.
+*/
 
 #ifndef _READER_H_
 #define _READER_H_
@@ -20,10 +19,10 @@
 using namespace std;
 
 /*!
- * \brief Class Reader.
- *
- * The reader read the csv file and fullfil a Map
- */
+* \brief Class Reader.
+*
+* The reader read the csv file and fullfil a Map
+*/
 class Reader
 {
 private:
@@ -36,3 +35,5 @@ public:
 };
 
 #endif
+
+

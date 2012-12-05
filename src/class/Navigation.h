@@ -1,16 +1,16 @@
 //=======================================================================
 // Basic C++: class Navigation
-//      Specifications of class Navigation
+// Specifications of class Navigation
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
 /*!
- * \file Navigation.h
- *
- * \brief Definition of class Navigation.
- */
+* \file Navigation.h
+*
+* \brief Definition of class Navigation.
+*/
 
 #ifndef _NAVIGATION_H_
 #define _NAVIGATION_H_
@@ -20,11 +20,11 @@
 using namespace std;
 
 /*!
- * \brief Class Navigation.
- *
- * The Navigation class has the Map of the area,
- * know the roads, initiate the robot (angle)... *MAKE A BETTER DESCRIPTION*
- */
+* \brief Class Navigation.
+*
+* The Navigation class has the Map of the area,
+* know the roads, initiate the robot (angle)... *MAKE A BETTER DESCRIPTION*
+*/
 class Navigation
 {
 private:
@@ -63,7 +63,7 @@ public:
   
   // Static methods
   //! Calculate the angle.
-  static double angle(Point p1, Point p2);  
+  static double angle(Point p1, Point p2);
   //! calculate the distance between the points paramaters.
   static int distance(Point p0, Point p1);
 };

@@ -1,16 +1,16 @@
 //=======================================================================
 // Basic C++: classe Road
-//      Specification of class Road
+// Specification of class Road
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou - Grzegorczyk Lucas
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
 /*!
- * \file Road.h
- *
- * \brief Definition of class Road.
- */
+* \file Road.h
+*
+* \brief Definition of class Road.
+*/
 
 #ifndef _ROAD_H_
 #define _ROAD_H_
@@ -26,28 +26,28 @@
 using namespace std;
 
 /*!
- * \brief Class Road.
- *
- * Represent road between two destinations
- * calculate the angle, the distance of the road.
- */
+* \brief Class Road.
+*
+* Represent road between two destinations
+* calculate the angle, the distance of the road.
+*/
 class Road
 {
 private:
-  Destination _start;  //!< Beginning of road
+  Destination _start; //!< Beginning of road
   Destination _end; //!< End of the road
   int _id; //!< id of the road *nothing related with the destination's id*
   double _angle; //!< Angle of the road
   double _distance; //!< Distance between the start and the end of the road
 
-  //! Update the angle and the distance 
+  //! Update the angle and the distance
   void update_road();
 
 
 public:
   // Constructors
   //! Regular constructor.
-  Road(Destination start, Destination end, int id = -1, double angle = DEFAULT_ANGLE, double   distance = DEFAULT_DIST)
+  Road(Destination start, Destination end, int id = -1, double angle = DEFAULT_ANGLE, double distance = DEFAULT_DIST)
     : _start(start), _end(end), _id(id), _angle(angle), _distance(distance) { if(!DEFAULT_VALUE) update_road(); }
 
   // Accessors
