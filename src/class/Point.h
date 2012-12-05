@@ -1,16 +1,16 @@
 //=======================================================================
 // Basic C++: classe Point
-//      Specification of class Point
+// Specification of class Point
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
 /*!
- * \file Point.h
- *
- * \brief Definition of class Point.
- */
+* \file Point.h
+*
+* \brief Definition of class Point.
+*/
 
 #ifndef _POINT_H_
 #define _POINT_H_
@@ -20,15 +20,15 @@
 using namespace std;
 
 /*!
- * \brief Class Point.
- *
- * Represent a point has x, y, id and list of points's id
- * reachable to allow the representation of roads.
- */
+* \brief Class Point.
+*
+* Represent a point has x, y, id and list of points's id
+* reachable to allow the representation of roads.
+*/
 class Point
 {
 protected:
-  int _x;  //!< x coordinate
+  int _x; //!< x coordinate
   int _y; //!< y coordinates
 
 public:

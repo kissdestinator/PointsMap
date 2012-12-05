@@ -1,16 +1,16 @@
 //=======================================================================
 // Basic C++: classe Map
-//      Specification of class Map
+// Specification of class Map
 //-----------------------------------------------------------------------
 // Auzias Maël - Constantina Ioannou
 // For the project: http://bit.ly/kiss-web
 //=======================================================================
 
 /*!
- * \file Map.cpp
- *
- * \brief Implementation of class Map.
- */
+* \file Map.cpp
+*
+* \brief Implementation of class Map.
+*/
 
 #include "Map.h"
 using namespace std;
@@ -34,11 +34,11 @@ list<Road> Map::find_path(Destination d1, Destination d2)
 //-----------------------------------------------------------------------
 
 /*!
- * We produce a printable form of the Map
- *
- * \param[in,out] os the output stream
- * \param[in] d the destination to print
- */
+* We produce a printable form of the Map
+*
+* \param[in,out] os the output stream
+* \param[in] d the destination to print
+*/
 ostream& operator<<(ostream& os, Destination d)
 {
   os << "You didn't code the function lazy n3rd!";

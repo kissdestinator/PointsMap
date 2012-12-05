@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../class/Destination.h"
+#include "../class/Map.h"
 using namespace std;
 
 /**
@@ -8,6 +9,8 @@ using namespace std;
  * Print them
  */
 int main() {
-
+  cout<< "its working"<<endl;
+  Map map();
+  list<int> rd; 
   return 0;
 }
